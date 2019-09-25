@@ -1,3 +1,6 @@
+# --------- ignore Rider files ---------
+.idea
+
 # --------- ignore Mac files ---------
 
 # General
