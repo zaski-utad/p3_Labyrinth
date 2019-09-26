@@ -26,7 +26,7 @@ public class Labyrinth
 		
 		Debug.Log("Entering new room...");
 
-		if (this.labyrinth.Count >= this.currentIndexRoom)
+		if (this.labyrinth.Count > this.currentIndexRoom)
 		{
 			Debug.Log("Advancing towards next room.");
 			this.labyrinth[this.currentIndexRoom].EnterRoom();
@@ -44,6 +44,10 @@ public class Labyrinth
 				default:
 					break;
 			}
+		}
+		else
+		{
+			Debug.Log("No more rooms in the Labyrinth. Congrats; you win.");
 		}
 	}
 
