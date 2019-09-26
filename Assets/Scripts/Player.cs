@@ -82,6 +82,8 @@ public class Player
 	{
 		int actualDamage = 1 + Mathf.Max(this.damage, currentWeapon.damage);
 		enemy.ReceiveDamage(actualDamage);
+		
+		Debug.Log("You deal " + actualDamage + " to enemy " + enemy.name);
 	}
 
 	public void StrongAttack (Enemy enemy)
@@ -90,6 +92,8 @@ public class Player
 		{
 			int actualDamage = 1 + (int) (currentWeapon.damage + this.damage * Math.Floor(Math.Sqrt(this.level)));
 			enemy.ReceiveDamage(actualDamage);
+			
+			Debug.Log("You deal " + actualDamage + " to enemy " + enemy.name);
 		}
 		else
 			Attack(enemy);

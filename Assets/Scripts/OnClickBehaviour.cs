@@ -17,6 +17,7 @@ public class OnClickBehaviour : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            Debug.Log("[DEBUG] Click");
             m_counterButtonTime = Time.time;
         }
 
